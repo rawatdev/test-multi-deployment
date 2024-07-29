@@ -11,6 +11,11 @@
     "deploy:surge": "pnpm build && surge dist --domain react-surge-check.surge.sh",
     "prepare": "husky"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "pnpm deploy:surge"
+    }
+  },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
